@@ -1,0 +1,50 @@
+@mixin heading-1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 64px;
+
+    color: $color-neutral-dark;
+}
+
+@mixin heading-2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+
+    color: $color-neutral-dark;
+}
+
+@mixin body {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: $color-neutral-light;
+}
+
+@mixin overline {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: $color-primary;
+}
+
+@mixin btn-text {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+
+
+}
+
+@mixin btn-text-detail {}
