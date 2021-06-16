@@ -1,41 +1,43 @@
 <template>
   <div id="app">
-    <h1 class="heading">HELLO</h1>
-    <h2 class="subheading">Lorem ipsum dolor sit amet.</h2>
-    <p class="overline">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, deserunt?
-    </p>
+    <Header />
+    <Feature />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from "./layout/Header.vue";
+import Feature from "./layout/Feature.vue";
+import Footer from "./layout/Footer.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header,
+    Feature,
+    Footer,
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/scss/main.scss";
+
+html {
+  display: flex;
+  justify-content: center;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
-.heading {
-  @include heading-1;
-}
+  margin: 0 auto;
+  min-height: 2215px;
+  width: 375px;
 
-.subheading {
-  @include heading-2;
-}
-
-.overline {
-  @include overline;
+  /* border: 1px solid black; */
 }
 </style>
