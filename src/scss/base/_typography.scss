@@ -1,4 +1,5 @@
-@mixin heading-1 {
+// Desktop
+@mixin heading-1-dk {
     font-style: normal;
     font-weight: 900;
     font-size: 64px;
@@ -7,7 +8,7 @@
     color: $color-neutral-dark;
 }
 
-@mixin heading-2 {
+@mixin heading-2-dk {
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -16,7 +17,12 @@
     color: $color-neutral-dark;
 }
 
-@mixin body {
+@mixin heading-2-dk-light {
+    color: $color-white;
+    @include heading-2-mb
+}
+
+@mixin body-dk {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -24,6 +30,49 @@
 
     color: $color-neutral-light;
 }
+
+@mixin body-dk-light {
+    color: $color-white;
+    @include body-mb;
+}
+
+// Mobile
+@mixin heading-1-mb {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+
+    color: $color-neutral-dark;
+}
+
+@mixin heading-2-mb {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+
+    color: $color-neutral-dark;
+}
+
+@mixin heading-2-mb-light {
+    @include heading-2-mb;
+    color: $color-white;
+}
+
+@mixin body-mb {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: $color-neutral-light;
+}
+
+@mixin body-mb-light {
+    @include body-dk;
+    color: $color-white;
+}
+
+// Shared
 
 @mixin overline {
     font-style: normal;

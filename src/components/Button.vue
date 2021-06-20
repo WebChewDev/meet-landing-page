@@ -1,5 +1,5 @@
 <template>
-  <div class="button-group">
+  <div class="btn-group">
     <button :subTextColorAlt="false" :style="styles" class="btn">
       {{ text }}
       <span :style="this.handleSubTextAlt()">{{ subText }}</span>
@@ -42,12 +42,18 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/main.scss";
 
+/* .btn-group{
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
+} */
+
 .btn {
   height: 58px;
   width: 193px;
   border: none;
   border-radius: 29px;
-  margin-bottom: 10px;
   @include btn-text;
 }
 

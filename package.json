@@ -25,6 +25,7 @@
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^2.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }
