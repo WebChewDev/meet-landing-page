@@ -1,15 +1,10 @@
 <template>
   <div class="footer">
     <div class="footer__img-container">
-      <!-- <img
-        class="footer__bgImage"
-        src=""
-        alt=""
-      /> -->
       <div class="footer__overlay"></div>
     </div>
 
-    <Icon class="footer__icon" />
+    <Icon version="2" class="footer__icon" />
     <h2 class="footer__heading">Experience more together</h2>
     <p class="footer__body">
       Stay connected with reliable HD meetings and unlimited one-on-one and

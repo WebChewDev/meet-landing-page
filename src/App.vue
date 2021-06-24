@@ -23,8 +23,10 @@ export default {
 
 <style lang="scss">
 @import "@/scss/main.scss";
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
 
 html {
+  font-family: 'Red Hat Display', sans-serif;
   display: flex;
   justify-content: center;
 }

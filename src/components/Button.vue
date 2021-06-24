@@ -1,6 +1,12 @@
 <template>
   <div class="btn-group">
-    <button :subTextColorAlt="false" :style="styles" class="btn">
+    <button
+      @mouseover="onHover"
+      :subTextColorAlt="false"
+      :style="styles"
+      :class="hover"
+      class="btn"
+    >
       {{ text }}
       <span :style="this.handleSubTextAlt()">{{ subText }}</span>
     </button>
@@ -14,12 +20,18 @@ export default {
     text: String,
     subText: String,
     subTextColorAlt: Boolean,
-    isColor: String,
+    type: String,
 
     width: { type: [String], default: "193px" },
     color: { type: [String], default: "#FFFFFF" },
     background: { type: [String], default: "#4D96A9" },
   },
+  data() {
+    return {
+      hover: "active",
+    };
+  },
+
   computed: {
     styles() {
       return {
@@ -35,19 +47,16 @@ export default {
         color: this.subTextColorAlt === true ? "#D9B8FF" : "#8FE3F9",
       };
     },
+    onHover() {
+      this.styles.background = "red";
+      console.log(this.styles);
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/scss/main.scss";
-
-/* .btn-group{
-  margin: 0;
-  padding: 0;
-  height: 0;
-  width: 0;
-} */
 
 .btn {
   height: 58px;
@@ -57,11 +66,15 @@ export default {
   @include btn-text;
 }
 
+
+
 .btn-primary {
-  background: red;
+  
 }
 
 .hover {
   background: green;
 }
+
+
 </style>

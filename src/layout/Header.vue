@@ -16,9 +16,10 @@
       text="What is it?"
       width="139px"
       background="#855FB1"
+      type='primary'
     />
 
-    <Icon class="header__icon" />
+    <Icon version="1" class="header__icon" />
   </div>
 </template>
 
