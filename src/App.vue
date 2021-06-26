@@ -23,23 +23,29 @@ export default {
 
 <style lang="scss">
 @import "@/scss/main.scss";
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
 
 html {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   display: flex;
   justify-content: center;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   margin: 0 auto;
   min-height: 2215px;
-  width: 375px;
 
-  /* border: 1px solid black; */
+  @include mq($from: tablet, $until: desktop) {
+    min-width: 768px;
+    min-height: 2128px;
+  }
+
+  @include mq($from: desktop) {
+    width: 1440px;
+    min-height: 1895px;
+  }
 }
 </style>

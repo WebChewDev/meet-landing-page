@@ -1,14 +1,8 @@
 <template>
-  <div class="btn-group">
-    <button
-      @mouseover="onHover"
-      :subTextColorAlt="false"
-      :style="styles"
-      :class="hover"
-      class="btn"
-    >
+  <div class="button-wrapper">
+    <button :style="styles" class="btn" :class="this.onHover()">
       {{ text }}
-      <span :style="this.handleSubTextAlt()">{{ subText }}</span>
+      <span :class="this.setSubTextColor()">{{ subText }}</span>
     </button>
   </div>
 </template>
@@ -19,37 +13,25 @@ export default {
   props: {
     text: String,
     subText: String,
-    subTextColorAlt: Boolean,
-    type: String,
-
-    width: { type: [String], default: "193px" },
-    color: { type: [String], default: "#FFFFFF" },
-    background: { type: [String], default: "#4D96A9" },
+    isSecondary: Boolean,
+    width: String,
   },
-  data() {
-    return {
-      hover: "active",
-    };
-  },
-
   computed: {
     styles() {
       return {
         width: this.width,
-        color: this.color,
-        background: this.background,
       };
     },
   },
+
   methods: {
-    handleSubTextAlt() {
-      return {
-        color: this.subTextColorAlt === true ? "#D9B8FF" : "#8FE3F9",
-      };
-    },
     onHover() {
-      this.styles.background = "red";
-      console.log(this.styles);
+      return this.isSecondary === true ? "btn__secondary" : "btn__primary";
+    },
+    setSubTextColor() {
+      return this.isSecondary === true
+        ? "btn__subtext-secondary"
+        : "btn__subtext-primary";
     },
   },
 };
@@ -63,18 +45,31 @@ export default {
   width: 193px;
   border: none;
   border-radius: 29px;
+  color: $color-white;
   @include btn-text;
+
+  &__primary {
+    background: $color-primary;
+  }
+
+  &__primary:hover {
+    background: $color-hvr-primary;
+  }
+
+  &__secondary {
+    background: $color-secondary;
+  }
+  &__secondary:hover {
+    background: $color-hvr-secondary;
+  }
+
+  /* Button text */
+
+  &__subtext-primary {
+    color: $color-hl-primary;
+  }
+  &__subtext-secondary {
+    color: $color-hl-secondary;
+  }
 }
-
-
-
-.btn-primary {
-  
-}
-
-.hover {
-  background: green;
-}
-
-
 </style>

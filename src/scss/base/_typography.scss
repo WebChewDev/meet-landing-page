@@ -36,13 +36,31 @@
     @include body-mb;
 }
 
+//Tablet
+
+@mixin heading-1-tab {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+
+    color: $color-neutral-dark;
+}
+
 // Mobile
 @mixin heading-1-mb {
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
+    line-height: 44px;
+    text-align: center;
 
     color: $color-neutral-dark;
+}
+
+@mixin heading-1-mb-light {
+    @include heading-1-mb;
+    color: $color-white;
 }
 
 @mixin heading-2-mb {

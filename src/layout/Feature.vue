@@ -24,21 +24,37 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/scss/main.scss";
+
 .feature {
   position: relative;
   height: 722px;
   width: 375px;
+
+  @include mq($from: tablet, $until: desktop) {
+    width: 768px;
+  }
+  @include mq($from: desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 746px;
+    width: 1440px;
+  }
 
   &__gallery {
     margin: 0 0 64px 0;
   }
 
   &__overline {
+    @include overline;
     height: 26px;
     text-align: center;
     margin: 0 auto 24px;
 
-    @include overline;
+    @include mq($from: desktop) {
+      margin: 0 auto 16px;
+    }
   }
 
   &__heading {
@@ -47,15 +63,42 @@ export default {
     width: 320px;
     height: 72px;
     margin: 0 auto 24px;
+
+    @include mq($from: tablet, $until: desktop) {
+      @include heading-1-mb;
+      height: 88px;
+      width: 445px;
+    }
+
+    @include mq($from: desktop) {
+      @include heading-2-dk;
+      height: 88px;
+      width: 445px;
+      margin: 0 auto 32px;
+    }
+
+    @include mq($from: desktop) {
+      @include heading-2-dk;
+      height: 88px;
+      width: 445px;
+    }
   }
 
   &__body {
     height: 130px;
     width: 327px;
     margin: 0 auto;
-
     text-align: center;
     @include body-mb;
+
+    @include mq($from: tablet, $until: desktop) {
+      height: 78px;
+      width: 573px;
+    }
+    @include mq($from: desktop) {
+      height: 78px;
+      width: 540px;
+    }
   }
 }
 </style>
