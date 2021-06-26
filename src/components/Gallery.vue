@@ -20,7 +20,8 @@ export default {
           alt: "woman in videocall",
         },
         {
-          image: require("@/assets/desktop/image-man-texting.jpg"),
+          image: require("@/assets/desktop/image-women-videochatting.jpg"),
+
           alt: "man texting",
         },
         {
@@ -28,7 +29,7 @@ export default {
           alt: "Men in meeting",
         },
         {
-          image: require("@/assets/desktop/image-women-videochatting.jpg"),
+          image: require("@/assets/desktop/image-man-texting.jpg"),
           alt: "Women on video call",
         },
       ],
@@ -61,7 +62,7 @@ export default {
 
     grid-template-rows: none;
     grid-template-columns: repeat(4, 242px);
-    grid-gap: 30px
+    grid-gap: 30px;
   }
 }
 
