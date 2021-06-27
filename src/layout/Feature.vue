@@ -31,6 +31,7 @@ export default {
   width: 375px;
 
   @include mq($from: tablet, $until: desktop) {
+    height: 524px;
     width: 768px;
   }
   @include mq($from: desktop) {
